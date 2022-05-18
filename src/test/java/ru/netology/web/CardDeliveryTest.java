@@ -32,12 +32,12 @@ public class CardDeliveryTest {
         String meeting = date(3);
         $("[placeholder=\"Город\"]").setValue("Санкт-Петербург");
         $("[placeholder=\"Дата встречи\"]").sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-        $("[placeholder=\"Дата встречи\"]").setValue(String.valueOf(meeting));
+        $("[placeholder=\"Дата встречи\"]").setValue(meeting);
         $("[name=\"name\"]").setValue("Колчак Александр");
         $("[name=\"phone\"]").setValue("+79118741920");
         $("[data-test-id=\"agreement\"]").click();
         $(byText("Забронировать")).click();
-        $("[data-test-id=\"notification\"]").shouldBe(visible, Duration.ofSeconds(15));
+        $("[data-test-id=\"notification\"]").shouldHave(Condition.text("Встреча успешно забронирована на " + meeting), Duration.ofSeconds(15));
     }
 
     @Test
@@ -45,7 +45,7 @@ public class CardDeliveryTest {
         String meeting = date(3);
         $("[placeholder=\"Город\"]").setValue("Химки");
         $("[placeholder=\"Дата встречи\"]").sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-        $("[placeholder=\"Дата встречи\"]").setValue(String.valueOf(meeting));
+        $("[placeholder=\"Дата встречи\"]").setValue(meeting);
         $("[name=\"name\"]").setValue("Колчак Александр");
         $("[name=\"phone\"]").setValue("+79118741920");
         $("[data-test-id=\"agreement\"]").click();
@@ -59,7 +59,7 @@ public class CardDeliveryTest {
         String meeting = date(3);
         $("[placeholder=\"Город\"]");
         $("[placeholder=\"Дата встречи\"]").sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-        $("[placeholder=\"Дата встречи\"]").setValue(String.valueOf(meeting));
+        $("[placeholder=\"Дата встречи\"]").setValue(meeting);
         $("[name=\"name\"]").setValue("Колчак Александр");
         $("[name=\"phone\"]").setValue("+791187419201");
         $("[data-test-id=\"agreement\"]").click();
@@ -73,7 +73,7 @@ public class CardDeliveryTest {
         String meeting = date(2);
         $("[placeholder=\"Город\"]").setValue("Санкт-Петербург");
         $("[placeholder=\"Дата встречи\"]").sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-        $("[placeholder=\"Дата встречи\"]").setValue(String.valueOf(meeting));
+        $("[placeholder=\"Дата встречи\"]").setValue(meeting);
         $("[name=\"name\"]").setValue("Колчак Александр");
         $("[name=\"phone\"]").setValue("+79118741920");
         $("[data-test-id=\"agreement\"]").click();
@@ -100,7 +100,7 @@ public class CardDeliveryTest {
         String meeting = date(3);
         $("[placeholder=\"Город\"]").setValue("Санкт-Петербург");
         $("[placeholder=\"Дата встречи\"]").sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-        $("[placeholder=\"Дата встречи\"]").setValue(String.valueOf(meeting));
+        $("[placeholder=\"Дата встречи\"]").setValue(meeting);
         $("[name=\"name\"]").setValue("Kolchak Alexander");
         $("[name=\"phone\"]").setValue("+79118741920");
         $("[data-test-id=\"agreement\"]").click();
@@ -114,7 +114,7 @@ public class CardDeliveryTest {
         String meeting = date(3);
         $("[placeholder=\"Город\"]").setValue("Санкт-Петербург");
         $("[placeholder=\"Дата встречи\"]").sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-        $("[placeholder=\"Дата встречи\"]").setValue(String.valueOf(meeting));
+        $("[placeholder=\"Дата встречи\"]").setValue(meeting);
         $("[name=\"name\"]");
         $("[name=\"phone\"]").setValue("+79118741920");
         $("[data-test-id=\"agreement\"]").click();
@@ -128,7 +128,7 @@ public class CardDeliveryTest {
         String meeting = date(3);
         $("[placeholder=\"Город\"]").setValue("Санкт-Петербург");
         $("[placeholder=\"Дата встречи\"]").sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-        $("[placeholder=\"Дата встречи\"]").setValue(String.valueOf(meeting));
+        $("[placeholder=\"Дата встречи\"]").setValue(meeting);
         $("[name=\"name\"]").setValue("Колчак Александр");
         $("[name=\"phone\"]").setValue("+791187419201");
         $("[data-test-id=\"agreement\"]").click();
@@ -142,7 +142,7 @@ public class CardDeliveryTest {
         String meeting = date(3);
         $("[placeholder=\"Город\"]").setValue("Санкт-Петербург");
         $("[placeholder=\"Дата встречи\"]").sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-        $("[placeholder=\"Дата встречи\"]").setValue(String.valueOf(meeting));
+        $("[placeholder=\"Дата встречи\"]").setValue(meeting);
         $("[name=\"name\"]").setValue("Колчак Александр");
         $("[name=\"phone\"]");
         $("[data-test-id=\"agreement\"]").click();
@@ -156,7 +156,7 @@ public class CardDeliveryTest {
         String meeting = date(3);
         $("[placeholder=\"Город\"]").setValue("Санкт-Петербург");
         $("[placeholder=\"Дата встречи\"]").sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-        $("[placeholder=\"Дата встречи\"]").setValue(String.valueOf(meeting));
+        $("[placeholder=\"Дата встречи\"]").setValue(meeting);
         $("[name=\"name\"]").setValue("Колчак Александр");
         $("[name=\"phone\"]").setValue("+79118741920");
         $("[data-test-id=\"agreement\"]");
